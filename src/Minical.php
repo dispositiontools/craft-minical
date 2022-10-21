@@ -48,7 +48,7 @@ class Minical extends Plugin
      *
      * @var Minical
      */
-    public static $plugin;
+    public static Plugin $plugin;
 
     // Public Properties
     // =========================================================================
@@ -58,21 +58,21 @@ class Minical extends Plugin
      *
      * @var string
      */
-    public $schemaVersion = '1.0.1';
+    public string $schemaVersion = '1.0.1';
 
     /**
      * Set to `true` if the plugin should have a settings view in the control panel.
      *
      * @var bool
      */
-    public $hasCpSettings = false;
+    public bool $hasCpSettings = false;
 
     /**
      * Set to `true` if the plugin should have its own section (main nav item) in the control panel.
      *
      * @var bool
      */
-    public $hasCpSection = false;
+    public bool $hasCpSection = false;
 
     // Public Methods
     // =========================================================================
@@ -88,12 +88,12 @@ class Minical extends Plugin
      * you do not need to load it in your init() method.
      *
      */
-    public function init()
+    public function init(): void
     {
         parent::init();
         self::$plugin = $this;
 
-        ray("init");
+      
 
         // Register our variables
         Event::on(

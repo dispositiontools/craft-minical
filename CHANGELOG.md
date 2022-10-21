@@ -1,6 +1,11 @@
 # Release Notes for Minical
 
 
+## 4.0.0 - 2022-10-21
+
+### Updated
+- Updated to work in CraftCMS 4
+
 ## 1.0.1 - 2022-02-06
 
 ## 1.0.0 - 2022-02-06

@@ -36,7 +36,7 @@ class Layout extends Component
 
 
     //  Minical::$plugin->layout->createCalendarLayout($options);
-    public function createCalendarLayout($options= null)
+    public static function createCalendarLayout($options= null): ?array
     {
 
         $now = DateTimeHelper::toDateTime('now');

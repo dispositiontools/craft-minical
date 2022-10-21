@@ -2,7 +2,7 @@
     "name": "dispositiontools/craft-minical",
     "description": "Show entries in a calendar layout",
     "type": "craft-plugin",
-    "version": "1.0.1",
+    "version": "4.0.0",
     "keywords": [
         "craft",
         "cms",
@@ -22,7 +22,15 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.0"
+        "craftcms/cms": "^4.0.0"
+    },
+    "config": {
+      "allow-plugins": {
+        "craftcms/plugin-installer": true,
+        "yiisoft/yii2-composer": true
+      },
+      "optimize-autoloader": true,
+      "sort-packages": true
     },
     "autoload": {
         "psr-4": {

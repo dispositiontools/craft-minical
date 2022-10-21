@@ -45,7 +45,7 @@ class MinicalVariable
      * @param null $optional
      * @return string
      */
-    public function cal($calOptions = null)
+    public function cal($calOptions = null): ?array
     {
 
       $returnData =  LayoutService::createCalendarLayout($calOptions);

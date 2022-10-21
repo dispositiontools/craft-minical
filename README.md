@@ -8,4 +8,4 @@ Give the plugin the elements you want to layout. Config a few other settings if 
 
 
 ## Requirements
-This plugin requires Craft 3.0.0+ and some interesting elements to display
+This plugin requires Craft 4.0.0+ and some interesting elements to display
