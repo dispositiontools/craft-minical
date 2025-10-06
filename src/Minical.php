@@ -10,15 +10,16 @@
 
 namespace dispositiontools\minical;
 
-use dispositiontools\minical\services\Layout as LayoutService;
-use dispositiontools\minical\variables\MinicalVariable;
+
+ 
 
 use Craft;
 use craft\base\Plugin;
 use craft\services\Plugins;
 use craft\events\PluginEvent;
 use craft\web\twig\variables\CraftVariable;
-
+use dispositiontools\minical\services\Layout as LayoutService;
+use dispositiontools\minical\services\MinicalVariable as MinicalVariableService;
 use yii\base\Event;
 
 /**
@@ -58,21 +59,21 @@ class Minical extends Plugin
      *
      * @var string
      */
-    public $schemaVersion = '1.0.1';
+    public  string $schemaVersion = '1.0.1';
 
     /**
      * Set to `true` if the plugin should have a settings view in the control panel.
      *
      * @var bool
      */
-    public $hasCpSettings = false;
+    public bool $hasCpSettings = false;
 
     /**
      * Set to `true` if the plugin should have its own section (main nav item) in the control panel.
      *
      * @var bool
      */
-    public $hasCpSection = false;
+    public bool $hasCpSection = false;
 
     // Public Methods
     // =========================================================================
@@ -88,12 +89,12 @@ class Minical extends Plugin
      * you do not need to load it in your init() method.
      *
      */
-    public function init()
+    public function init(): void
     {
         parent::init();
         self::$plugin = $this;
 
-        ray("init");
+       
 
         // Register our variables
         Event::on(
@@ -102,7 +103,7 @@ class Minical extends Plugin
             function (Event $event) {
                 /** @var CraftVariable $variable */
                 $variable = $event->sender;
-                $variable->set('minical', MinicalVariable::class);
+                $variable->set('minical', MinicalVariableService::class);
             }
         );
 

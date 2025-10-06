@@ -37,7 +37,8 @@
         "documentationUrl": "https://disposition.tools/craft-plugins/mini-cal",
         "changelogUrl": "https://raw.githubusercontent.com/dispositiontools/minical/master/CHANGELOG.md",
         "components": {
-            "layout": "dispositiontools\\minical\\services\\Layout"
+            "layout": "dispositiontools\\minical\\services\\Layout",
+            "minicalVariable": "dispositiontools\\minical\\services\\MinicalVariable"
         },
         "class": "dispositiontools\\minical\\Minical"
     }
